@@ -7,6 +7,7 @@ At the moment, it sets apex classes to use java syntax highlighting, and visualf
 Installation
 ------------
 If you're using [pathogen](https://github.com/tpope/vim-pathogen):
+
 	$ git clone git://github.com/ejholmes/vim-forcedotcom.git ~/.vim/bundle/vim-forcedotcom
 
 Otherwise, copy all the files to their respective directories under ~/.vim
