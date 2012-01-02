@@ -29,6 +29,8 @@ syn match   apexClassDecl	    "[^.]\s*\<class\>"ms=s+1
 syn match   apexAnnotation	    "@\([_$a-zA-Z][_$a-zA-Z0-9]*\.\)*[_$a-zA-Z][_$a-zA-Z0-9]*\>"
 syn match   apexClassDecl	    "@interface\>"
 syn match   apexBraces          "[{}]"
+syn match   apexKeyword         "[<>]"
+syn match   apexKeyword         "=>"
 " syn match   apexSObject         "[a-zA-Z-_1-9]*__c"
 syn region  apexString          start=+'+ end=+'+
 
@@ -57,6 +59,7 @@ hi def link apexException       Exception
 hi def link apexStorageClass    StorageClass
 hi def link apexClassDecl       StorageClass
 hi def link apexScopeDecl       Keyword
+hi def link apexKeyword         Keyword
 hi def link apexAnnotation      PreProc
 hi def link apexString          String
 hi def link apexFuncDef         Function
