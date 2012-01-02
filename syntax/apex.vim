@@ -21,7 +21,7 @@ syn keyword apexStorageClass	static transient final serializable
 syn keyword apexException       throw try catch finally
 syn keyword apexClassDecl       extends implements interface enum
 syn keyword apexBranch          break continue
-syn keyword apexScopeDecl       public protected private abstract global
+syn keyword apexScopeDecl       public protected private abstract global trigger on after before
 syn keyword apexTodo            contained TODO FIXME
 syn match   apexTypedef		    "\.\s*\<class\>"ms=s+1
 syn match   apexClassDecl	    "^class\>"
