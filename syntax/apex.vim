@@ -31,6 +31,7 @@ syn match   apexClassDecl	    "@interface\>"
 syn match   apexBraces          "[{}]"
 syn match   apexKeyword         "[<>]"
 syn match   apexKeyword         "=>"
+syn match   apexConstant        ":[a-zA-Z1-9-_]*"
 " syn match   apexSObject         "[a-zA-Z-_1-9]*__c"
 syn region  apexString          start=+'+ end=+'+
 
