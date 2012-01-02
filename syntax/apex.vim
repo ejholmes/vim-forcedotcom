@@ -62,57 +62,6 @@ syn match   javaUserLabelRef	"\k\+" contained
 syn match   javaVarArg		"\.\.\."
 syn keyword javaScopeDecl	public protected private abstract
 
-if exists("java_highlight_java_lang_ids")
-  let java_highlight_all=1
-endif
-if exists("java_highlight_all")  || exists("java_highlight_java")  || exists("java_highlight_java_lang") 
-  " java.lang.*
-  syn match javaLangClass "\<System\>"
-  syn keyword javaR_JavaLang NegativeArraySizeException ArrayStoreException IllegalStateException RuntimeException IndexOutOfBoundsException UnsupportedOperationException ArrayIndexOutOfBoundsException ArithmeticException ClassCastException EnumConstantNotPresentException StringIndexOutOfBoundsException IllegalArgumentException IllegalMonitorStateException IllegalThreadStateException NumberFormatException NullPointerException TypeNotPresentException SecurityException
-  syn cluster javaTop add=javaR_JavaLang
-  syn cluster javaClasses add=javaR_JavaLang
-  JavaHiLink javaR_JavaLang javaR_Java
-  syn keyword javaC_JavaLang Process RuntimePermission StringKeySet CharacterData01 Class ThreadLocal ThreadLocalMap CharacterData0E Package Character StringCoding Long ProcessImpl ProcessEnvironment Short AssertionStatusDirectives 1PackageInfoProxy UnicodeBlock InheritableThreadLocal AbstractStringBuilder StringEnvironment ClassLoader ConditionalSpecialCasing CharacterDataPrivateUse StringBuffer StringDecoder Entry StringEntry WrappedHook StringBuilder StrictMath State ThreadGroup Runtime CharacterData02 MethodArray Object CharacterDataUndefined Integer Gate Boolean Enum Variable Subset StringEncoder Void Terminator CharsetSD IntegerCache CharacterCache Byte CharsetSE Thread SystemClassLoaderAction CharacterDataLatin1 StringValues StackTraceElement Shutdown ShortCache String ConverterSD ByteCache Lock EnclosingMethodInfo Math Float Value Double SecurityManager LongCache ProcessBuilder StringEntrySet Compiler Number UNIXProcess ConverterSE ExternalData CaseInsensitiveComparator CharacterData00 NativeLibrary
-  syn cluster javaTop add=javaC_JavaLang
-  syn cluster javaClasses add=javaC_JavaLang
-  JavaHiLink javaC_JavaLang javaC_Java
-  syn keyword javaE_JavaLang IncompatibleClassChangeError InternalError UnknownError ClassCircularityError AssertionError ThreadDeath IllegalAccessError NoClassDefFoundError ClassFormatError UnsupportedClassVersionError NoSuchFieldError VerifyError ExceptionInInitializerError InstantiationError LinkageError NoSuchMethodError Error UnsatisfiedLinkError StackOverflowError AbstractMethodError VirtualMachineError OutOfMemoryError
-  syn cluster javaTop add=javaE_JavaLang
-  syn cluster javaClasses add=javaE_JavaLang
-  JavaHiLink javaE_JavaLang javaE_Java
-  syn keyword javaX_JavaLang CloneNotSupportedException Exception NoSuchMethodException IllegalAccessException NoSuchFieldException Throwable InterruptedException ClassNotFoundException InstantiationException
-  syn cluster javaTop add=javaX_JavaLang
-  syn cluster javaClasses add=javaX_JavaLang
-  JavaHiLink javaX_JavaLang javaX_Java
-
-  JavaHiLink javaR_Java javaR_
-  JavaHiLink javaC_Java javaC_
-  JavaHiLink javaE_Java javaE_
-  JavaHiLink javaX_Java javaX_
-  JavaHiLink javaX_		     javaExceptions
-  JavaHiLink javaR_		     javaExceptions
-  JavaHiLink javaE_		     javaExceptions
-  JavaHiLink javaC_		     javaConstant
-
-  syn keyword javaLangObject clone equals finalize getClass hashCode
-  syn keyword javaLangObject notify notifyAll toString wait
-  JavaHiLink javaLangObject		     javaConstant
-  syn cluster javaTop add=javaLangObject
-endif
-
-if filereadable(expand("<sfile>:p:h")."/javaid.vim")
-  source <sfile>:p:h/javaid.vim
-endif
-
-if exists("java_space_errors")
-  if !exists("java_no_trail_space_error")
-    syn match	javaSpaceError	"\s\+$"
-  endif
-  if !exists("java_no_tab_space_error")
-    syn match	javaSpaceError	" \+\t"me=e-1
-  endif
-endif
-
 syn region  javaLabelRegion	transparent matchgroup=javaLabel start="\<case\>" matchgroup=NONE end=":" contains=javaNumber,javaCharacter
 syn match   javaUserLabel	"^\s*[_$a-zA-Z][_$a-zA-Z0-9_]*\s*:"he=e-1 contains=javaLabel
 syn keyword javaLabel		default
@@ -122,10 +71,6 @@ if !exists("java_allow_cpp_keywords")
   syn keyword javaError register signed sizeof struct template typedef union
   syn keyword javaError unsigned operator
 endif
-
-" The following cluster contains all java groups except the contained ones
-syn cluster javaTop add=javaExternal,javaError,javaError,javaBranch,javaLabelRegion,javaLabel,javaConditional,javaRepeat,javaBoolean,javaConstant,javaTypedef,javaOperator,javaType,javaType,javaStatement,javaStorageClass,javaAssert,javaExceptions,javaMethodDecl,javaClassDecl,javaClassDecl,javaClassDecl,javaScopeDecl,javaError,javaError2,javaUserLabel,javaLangObject,javaAnnotation,javaVarArg
-
 
 " Comments
 syn keyword javaTodo		 contained TODO FIXME XXX
@@ -312,9 +257,9 @@ endif
 
 delcommand JavaHiLink
 
-let b:current_syntax = "java"
+let b:current_syntax = "apex"
 
-if main_syntax == 'java'
+if main_syntax == 'apex'
   unlet main_syntax
 endif
 
