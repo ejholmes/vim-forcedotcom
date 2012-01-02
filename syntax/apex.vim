@@ -29,7 +29,7 @@ syn match   apexClassDecl	    "[^.]\s*\<class\>"ms=s+1
 syn match   apexAnnotation	    "@\([_$a-zA-Z][_$a-zA-Z0-9]*\.\)*[_$a-zA-Z][_$a-zA-Z0-9]*\>"
 syn match   apexClassDecl	    "@interface\>"
 syn match   apexBraces          "[{}]"
-syn match   apexSObject         "[a-zA-Z]*__c"
+syn match   apexSObject         "[a-zA-Z-_1-9]*__c"
 syn region  apexString          start=+'+ end=+'+
 
 " Comments
