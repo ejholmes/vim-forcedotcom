@@ -12,7 +12,7 @@ syn keyword apexBoolean         true false
 syn keyword apexConstant        null
 syn keyword apexTypedef         this super
 syn keyword apexOperator        new insert update delete
-syn keyword apexSoqlStatement   contained select where and in includes from limit
+syn keyword apexSoqlStatement   contained select where and in includes from limit order by asc desc
 syn keyword apexStatement       return
 syn keyword apexType            String Integer Date Datetime Decimal Double Time Map List Blob Boolean Long Set sObject
 syn keyword apexType            PageReference ApexPages Database System Crypto Cookie Document EncodingUtil Http HttpRequest HttpResponse UserInfo Test Trigger XmlNode XmlStreamReader XmlStreamWriter Site Schema
