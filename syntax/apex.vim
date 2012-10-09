@@ -32,7 +32,7 @@ syn match   apexClassDecl	    "@interface\>"
 syn match   apexBraces          "[{}]"
 syn match   apexKeyword         "[<>]"
 syn match   apexKeyword         "=>"
-syn region  apexString          start=+'+ end=+'+
+syn region  apexString          start=+'+ end=+'+ skip=+\\'+
 syn region  apexSoql            start=+\[+ end=+]+ contains=apexSoqlStatement,apexNumber,apexString,apexSObject
 
 " Comments
