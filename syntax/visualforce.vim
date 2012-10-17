@@ -10,4 +10,4 @@ runtime! syntax/html.vim
 
 syn keyword htmlTagName        apex contained
 syn keyword htmlTagName        c contained
-syn match   htmlSpecialChar    "{!.*}" contained contains=htmlString
+syn region   htmlSpecialChar    start=+{!+ end=+}+ 
