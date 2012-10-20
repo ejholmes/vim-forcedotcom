@@ -12,7 +12,8 @@ syn keyword apexBoolean         true false
 syn keyword apexConstant        null
 syn keyword apexTypedef         this super
 syn keyword apexOperator        new insert update delete upsert
-syn keyword apexSoqlStatement   contained select where and in includes from limit order by asc desc
+syn keyword apexSoqlStatement   contained select where having and or in includes from limit group order by asc desc
+syn keyword apexSoqlStatement   contained SELECT WHERE HAVING AND OR IN INCLUDES FROM LIMIT GROUP ORDER BY ASC DESC
 syn keyword apexStatement       return
 syn keyword apexType            String Integer Date Datetime Decimal Double Time Map List Blob Boolean Long Set sObject
 syn keyword apexType            PageReference ApexPages Database System Crypto Cookie Document EncodingUtil Http HttpRequest HttpResponse UserInfo Test Trigger XmlNode XmlStreamReader XmlStreamWriter Site Schema
