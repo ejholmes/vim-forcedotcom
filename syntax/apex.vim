@@ -6,7 +6,14 @@ if exists("b:current_syntax")
     finish
 endif
 
-syn keyword apexConditional     if else switch
+syn keyword apexError           activate any autonomous begin bigdecimal byte
+syn keyword apexError           case cast char collect const default end exit
+syn keyword apexError           export float goto hint import
+syn keyword apexError           inner into join loop number of outer parallel
+syn keyword apexError           pragma retrieve returning search short stat
+syn keyword apexError           switch synchronized then transaction when
+
+syn keyword apexConditional     if else
 syn keyword apexRepeat          while for do
 syn keyword apexBoolean         true false
 syn keyword apexConstant        null
