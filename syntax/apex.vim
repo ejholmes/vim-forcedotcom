@@ -43,7 +43,7 @@ syn match   apexBraces          "[{}]"
 syn match   apexKeyword         "[<>]"
 syn match   apexKeyword         "=>"
 syn region  apexString          start=+'+ end=+'+ skip=+\\'+
-syn region  apexSoql            start=+\[+ end=+]+ contains=apexSoqlStatement,apexNumber,apexString,apexSObject
+syn region  apexSoql            start=+\[+ end=+]+ contains=apexSoqlStatement,apexNumber,apexString,apexSObject,apexObject,apexIdentifier,apexConstant
 
 " Identifiers
 syn match apexObject /\<\u\w*\>/ display
