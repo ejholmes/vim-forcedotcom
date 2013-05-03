@@ -45,6 +45,11 @@ syn match   apexKeyword         "=>"
 syn region  apexString          start=+'+ end=+'+ skip=+\\'+
 syn region  apexSoql            start=+\[+ end=+]+ contains=apexSoqlStatement,apexNumber,apexString,apexSObject
 
+" Identifiers
+syn match apexObject /\<\u\w*\>/ display
+syn match apexConstant /\<\u[A-Z0-9_]\+\>/ display
+syn match apexIdentifier /\<\l[A-Z0-9_]\+\>/ display
+
 " Comments
 syn region  apexComment         start="/\*" end="\*/" contains=apexTodo
 syn match   apexComment         "//.*" contains=apexTodo
@@ -62,6 +67,7 @@ hi def link apexBranch          Conditional
 hi def link apexRepeat          Repeat
 hi def link apexBoolean         Boolean
 hi def link apexConstant        Constant
+hi def link apexIdentifier      Identifier
 hi def link apexStatement       Statement
 hi def link apexTypedef         Typedef
 hi def link apexOperator        Operator
