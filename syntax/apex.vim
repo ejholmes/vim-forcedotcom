@@ -12,6 +12,7 @@ syn keyword apexError           export float goto hint import
 syn keyword apexError           inner into join loop number of outer parallel
 syn keyword apexError           pragma retrieve returning search short stat
 syn keyword apexError           switch synchronized then transaction when
+syn match apexError "\""
 
 syn keyword apexConditional     if else
 syn keyword apexRepeat          while for do
