@@ -11,7 +11,7 @@ syn case ignore
 syn keyword apexError           activate any autonomous begin bigdecimal byte
 syn keyword apexError           case cast char collect const default end exit
 syn keyword apexError           export float goto hint import
-syn keyword apexError           inner into join loop number of outer parallel
+syn keyword apexError           inner into loop number of outer parallel
 syn keyword apexError           pragma retrieve returning search short stat
 syn keyword apexError           switch synchronized then transaction when
 syn match apexError "\""
