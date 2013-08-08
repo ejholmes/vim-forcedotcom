@@ -37,12 +37,12 @@ syn keyword apexBranch          break continue
 syn keyword apexScopeDecl       public protected private abstract global
 syn keyword apexScopeDecl       trigger on after before
 syn keyword apexTodo            contained TODO FIXME
-syn match   apexTypedef		    "\.\s*\<class\>"ms=s+1
-syn match   apexClassDecl	    "^class\>"
-syn match   apexClassDecl	    "[^.]\s*\<class\>"ms=s+1
+syn match   apexTypedef         "\.\s*\<class\>"ms=s+1
+syn match   apexClassDecl       "^class\>"
+syn match   apexClassDecl       "[^.]\s*\<class\>"ms=s+1
 syn match   apexSharing         "\<with\(out\)\?\>\s\+\<sharing\>"
-syn match   apexAnnotation	    "@\([_$a-zA-Z][_$a-zA-Z0-9]*\.\)*[_$a-zA-Z][_$a-zA-Z0-9]*\>"
-syn match   apexClassDecl	    "@interface\>"
+syn match   apexAnnotation      "@\([_$a-zA-Z][_$a-zA-Z0-9]*\.\)*[_$a-zA-Z][_$a-zA-Z0-9]*\>"
+syn match   apexClassDecl       "@interface\>"
 syn match   apexBraces          "[{}]"
 syn match   apexKeyword         "[<>]"
 syn match   apexKeyword         "=>"
@@ -64,10 +64,10 @@ syn match   apexComment         "//.*" contains=apexTodo
 syn match   apexComment         "/\*\*/"
 
 " Numbers
-syn match   apexNumber		    "\<\(0[0-7]*\|0[xX]\x\+\|\d\+\)[lL]\=\>"
-syn match   apexNumber		    "\(\<\d\+\.\d*\|\.\d\+\)\([eE][-+]\=\d\+\)\=[fFdD]\="
-syn match   apexNumber		    "\<\d\+[eE][-+]\=\d\+[fFdD]\=\>"
-syn match   apexNumber		    "\<\d\+\([eE][-+]\=\d\+\)\=[fFdD]\>"
+syn match   apexNumber          "\<\(0[0-7]*\|0[xX]\x\+\|\d\+\)[lL]\=\>"
+syn match   apexNumber          "\(\<\d\+\.\d*\|\.\d\+\)\([eE][-+]\=\d\+\)\=[fFdD]\="
+syn match   apexNumber          "\<\d\+[eE][-+]\=\d\+[fFdD]\=\>"
+syn match   apexNumber          "\<\d\+\([eE][-+]\=\d\+\)\=[fFdD]\>"
 
 hi def link apexError           Error
 hi def link apexConditional     Conditional
