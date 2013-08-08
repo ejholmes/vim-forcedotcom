@@ -6,6 +6,8 @@ if exists("b:current_syntax")
     finish
 endif
 
+syn case ignore
+
 syn keyword apexError           activate any autonomous begin bigdecimal byte
 syn keyword apexError           case cast char collect const default end exit
 syn keyword apexError           export float goto hint import
@@ -46,10 +48,14 @@ syn match   apexKeyword         "=>"
 syn region  apexString          start=+'+ end=+'+ skip=+\\'+
 syn region  apexSoql            start=+\[+ end=+]+ contains=apexSoqlStatement,apexNumber,apexString,apexSObject,apexObject,apexIdentifier,apexConstant
 
+syn case match
+
 " Identifiers
 syn match apexObject /\<\u\w*\>/ display
 syn match apexConstant /\<\u[A-Z0-9_]\+\>/ display
 syn match apexIdentifier /\<\l[A-Z0-9_]\+\>/ display
+
+syn case ignore
 
 " Comments
 syn region  apexComment         start="/\*" end="\*/" contains=apexTodo
