@@ -40,6 +40,7 @@ syn keyword apexTodo            contained TODO FIXME
 syn match   apexTypedef		    "\.\s*\<class\>"ms=s+1
 syn match   apexClassDecl	    "^class\>"
 syn match   apexClassDecl	    "[^.]\s*\<class\>"ms=s+1
+syn match   apexSharing         "\<with\(out\)\?\>\s\+\<sharing\>"
 syn match   apexAnnotation	    "@\([_$a-zA-Z][_$a-zA-Z0-9]*\.\)*[_$a-zA-Z][_$a-zA-Z0-9]*\>"
 syn match   apexClassDecl	    "@interface\>"
 syn match   apexBraces          "[{}]"
@@ -87,6 +88,7 @@ hi def link apexException       Exception
 hi def link apexStorageClass    StorageClass
 hi def link apexClassDecl       StorageClass
 hi def link apexScopeDecl       Keyword
+hi def link apexSharing         Keyword
 hi def link apexKeyword         Keyword
 hi def link apexAnnotation      PreProc
 hi def link apexString          String
