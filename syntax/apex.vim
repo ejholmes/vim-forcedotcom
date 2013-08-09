@@ -22,6 +22,7 @@ syn keyword apexBoolean         true false
 syn keyword apexConstant        null
 syn keyword apexTypedef         this super
 syn keyword apexOperator        new insert update delete upsert
+syn match   apexEscapeChar      contained "\(\\n\|\\r\|\\t\)"
 syn keyword apexSoqlStatement   contained select where having and or like not in includes excludes from limit group order by asc desc
 syn match   apexSoqlStatement   contained "for\s\+update"
 syn keyword apexStatement       return
@@ -46,7 +47,7 @@ syn match   apexClassDecl       "@interface\>"
 syn match   apexBraces          "[{}]"
 syn match   apexKeyword         "[<>]"
 syn match   apexKeyword         "=>"
-syn region  apexString          start=+'+ end=+'+ skip=+\\'+
+syn region  apexString          start=+'+ end=+'+ skip=+\\'+ contains=apexEscapeChar
 syn region  apexSoql            start=+\[+ end=+]+ contains=apexSoqlStatement,apexNumber,apexString,apexSObject,apexObject,apexIdentifier,apexConstant
 
 syn case match
@@ -92,6 +93,7 @@ hi def link apexSharing         Keyword
 hi def link apexKeyword         Keyword
 hi def link apexAnnotation      PreProc
 hi def link apexString          String
+hi def link apexEscapeChar      SpecialChar
 hi def link apexFuncDef         Function
 hi def link apexComment         Comment
 hi def link apexTodo            Todo
