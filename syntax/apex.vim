@@ -8,7 +8,7 @@ endif
 
 syn case ignore
 
-syn keyword apexError           activate any autonomous begin bigdecimal byte
+syn keyword apexError           activate autonomous begin bigdecimal byte
 syn keyword apexError           case cast char collect const default end exit
 syn keyword apexError           export float goto hint import
 syn keyword apexError           inner into loop number of outer parallel
