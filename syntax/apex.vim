@@ -49,7 +49,7 @@ syn match   apexBraces          "[{}]"
 syn match   apexKeyword         "[<>]"
 syn match   apexKeyword         "=>"
 syn region  apexString          start=+'+ end=+'+ skip=+\\'+ contains=apexEscapeChar
-syn region  apexSoql            start=+\[+ end=+]+ contains=apexSoqlStatement,apexNumber,apexString,apexSObject,apexObject,apexIdentifier,apexConstant
+syn region  apexSoql            start=+\[+ end=+]+ contains=apexSoqlStatement,apexNumber,apexString,apexSObject,apexObject,apexIdentifier,apexConstant,apexComment
 
 syn case match
 
