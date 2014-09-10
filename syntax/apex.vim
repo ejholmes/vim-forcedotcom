@@ -26,6 +26,7 @@ syn keyword apexOperator        insert update delete upsert merge
 syn match   apexEscapeChar      contained "\(\\n\|\\r\|\\t\)"
 syn keyword apexSoqlStatement   contained select where having and or like not in includes excludes from limit group order by asc desc
 syn match   apexSoqlStatement   contained "for\s\+update"
+syn match   apexSoqlStatement   contained "with\s\+data\s\+category"
 syn keyword apexStatement       return
 syn keyword apexType            String Integer Date Datetime Decimal Double Time Map List Blob Boolean Long sObject
 syn match   apexType            "Set\(\s*\)<"me=s+3
@@ -49,7 +50,7 @@ syn match   apexClassDecl       "@interface\>"
 syn match   apexBraces          "[{}]"
 syn match   apexKeyword         "[<>]"
 syn match   apexKeyword         "=>"
-syn region  apexString          start=+'+ end=+'+ skip=+\\'+ contains=apexEscapeChar
+syn region  apexString          start=+'+ end=+'+ skip=+\(\\\\\|\\'\)+ contains=apexEscapeChar
 syn region  apexSoql            start=+\[+ end=+]+ contains=apexSoqlStatement,apexNumber,apexString,apexSObject,apexObject,apexIdentifier,apexConstant,apexComment
 
 syn case match
