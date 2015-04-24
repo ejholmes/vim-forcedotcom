@@ -24,7 +24,8 @@ setlocal comments& comments^=sO:*\ -,mO:*\ \ ,exO:*/
 
 setlocal commentstring=//%s
 
-if exists('loaded_tlist')
+" TODO: Send a patch to tlist 
+if exists('loaded_tlist') && !exists('g:tlist_apex_settings')
     let g:tlist_apex_settings = 'c#;' .
         \ 'f:field;' .
         \ 'p:property;' .
@@ -33,7 +34,8 @@ if exists('loaded_tlist')
         \ 'm:method'
 endif
 
-if exists('loaded_tagbar')
+" TODO: Send a patch to tagbar
+if exists('loaded_tagbar') && !exists('g:tagbar_type_apex')
     let g:tagbar_type_apex = {
         \ 'ctagstype' : 'c#',
         \ 'kinds' : [
@@ -54,8 +56,19 @@ if exists('loaded_tagbar')
     \ }
 endif
 
-if exists('loaded_tcomment')
+" TODO: Send a patch to tcomment
+if exists('loaded_tcomment') && !exists('g:tcommentGuessFileType_apex')
     let g:tcommentGuessFileType_apex = 'java'
+endif
+
+" TODO: Send a patch to Ctrlp, but this will probably have to stay since kien/Ctrlp
+" is pretty out of date
+if exists('loaded_ctrlp')
+    if exists('g:ctrlp_buftag_types')
+        let g:ctrlp_buftag_types['apex'] = '--language-force=c#'
+    else
+        let g:ctrlp_buftag_types = { 'apex': '--language-force=c#' }
+    endif
 endif
 
 " Undo the stuff we changed.
