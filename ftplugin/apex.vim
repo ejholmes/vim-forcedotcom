@@ -24,8 +24,8 @@ setlocal comments& comments^=sO:*\ -,mO:*\ \ ,exO:*/
 
 setlocal commentstring=//%s
 
-" TODO: Send a patch to tlist 
-if exists('loaded_tlist') && !exists('g:tlist_apex_settings')
+" TODO: Send a patch to tlist
+if !exists('g:tlist_apex_settings')
     let g:tlist_apex_settings = 'c#;' .
         \ 'f:field;' .
         \ 'p:property;' .
@@ -35,7 +35,7 @@ if exists('loaded_tlist') && !exists('g:tlist_apex_settings')
 endif
 
 " TODO: Send a patch to tagbar
-if exists('loaded_tagbar') && !exists('g:tagbar_type_apex')
+if !exists('g:tagbar_type_apex')
     let g:tagbar_type_apex = {
         \ 'ctagstype' : 'c#',
         \ 'kinds' : [
@@ -72,7 +72,7 @@ if exists('loaded_ctrlp')
 endif
 
 " Undo the stuff we changed.
-let b:undo_ftplugin = " formatoptions< comments< commentstring<"
+let b:undo_ftplugin = "setlocal formatoptions< comments< commentstring<"
 
 " Restore the saved compatibility options.
 let &cpo = s:save_cpo
