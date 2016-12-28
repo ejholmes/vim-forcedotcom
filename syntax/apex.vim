@@ -22,7 +22,7 @@ syn keyword apexBoolean         true false
 syn keyword apexConstant        null
 syn keyword apexTypedef         this super
 syn match   apexOperator        "\(\.\)\@<!new\>"
-syn keyword apexOperator        insert update delete upsert merge
+syn keyword apexOperator        insert update delete undelete upsert merge
 syn match   apexEscapeChar      contained "\(\\n\|\\r\|\\t\)"
 syn keyword apexSoqlStatement   contained select where having and or like not in includes excludes from limit group order by asc desc
 syn match   apexSoqlStatement   contained "for\s\+update"
