@@ -13,10 +13,11 @@ syn keyword apexError           case cast char collect const default end exit
 syn keyword apexError           export float goto hint import
 syn keyword apexError           inner into loop number of outer parallel
 syn keyword apexError           pragma retrieve returning short stat
-syn keyword apexError           switch synchronized then transaction when
+syn keyword apexError           synchronized then transaction
 syn match apexError             "\""
 
-syn keyword apexConditional     if else
+syn match   apexConditional     "\<switch\s\+on\>"
+syn keyword apexConditional     if else when
 syn keyword apexRepeat          while for do
 syn keyword apexBoolean         true false
 syn keyword apexConstant        null
