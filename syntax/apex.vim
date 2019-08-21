@@ -53,7 +53,7 @@ syn keyword apexTodo            contained TODO FIXME
 syn match   apexTypedef         "\.\s*\<class\>"ms=s+1
 syn match   apexClassDecl       "^class\>"
 syn match   apexClassDecl       "[^.]\s*\<class\>"ms=s+1
-syn match   apexSharing         "\<with\(out\)\?\>\s\+\<sharing\>"
+syn match   apexSharing         "\<\(inherited\|with\(out\)\?\)\>\s\+\<sharing\>"
 syn match   apexAnnotation      "@\([_$a-zA-Z][_$a-zA-Z0-9]*\.\)*[_$a-zA-Z][_$a-zA-Z0-9]*\>"
 syn keyword apexAnnotation      testMethod webService override
 syn match   apexClassDecl       "@interface\>"
