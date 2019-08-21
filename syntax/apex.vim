@@ -13,10 +13,11 @@ syn keyword apexError           case cast char collect const default end exit
 syn keyword apexError           export float goto hint import
 syn keyword apexError           inner into loop number of outer parallel
 syn keyword apexError           pragma retrieve returning short stat
-syn keyword apexError           switch synchronized then transaction when
+syn keyword apexError           synchronized then transaction
 syn match apexError             "\""
 
-syn keyword apexConditional     if else
+syn match   apexConditional     "\<switch\s\+on\>"
+syn keyword apexConditional     if else when
 syn keyword apexRepeat          while for do
 syn keyword apexBoolean         true false
 syn keyword apexConstant        null
@@ -52,7 +53,7 @@ syn keyword apexTodo            contained TODO FIXME
 syn match   apexTypedef         "\.\s*\<class\>"ms=s+1
 syn match   apexClassDecl       "^class\>"
 syn match   apexClassDecl       "[^.]\s*\<class\>"ms=s+1
-syn match   apexSharing         "\<with\(out\)\?\>\s\+\<sharing\>"
+syn match   apexSharing         "\<\(inherited\|with\(out\)\?\)\>\s\+\<sharing\>"
 syn match   apexAnnotation      "@\([_$a-zA-Z][_$a-zA-Z0-9]*\.\)*[_$a-zA-Z][_$a-zA-Z0-9]*\>"
 syn keyword apexAnnotation      testMethod webService override
 syn match   apexClassDecl       "@interface\>"
